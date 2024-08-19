@@ -2,6 +2,7 @@ import express from 'express';
 import cors from 'cors';
 import { PrismaClient } from '@prisma/client';
 import dotenv from 'dotenv';
+import { corsOptions } from './config/cors.js';
 
 import { authRouter } from './routes/authRoutes.js';
 
@@ -9,7 +10,7 @@ const app = express();
 export const prisma = new PrismaClient();
 
 dotenv.config();
-app.use(cors());
+app.use(cors(corsOptions));
 app.use(express.json());
 
 const host = 'localhost';
