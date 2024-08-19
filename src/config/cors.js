@@ -1,4 +1,4 @@
-const whitelist = ['https://currency-rates.onrender.com'];
+const whitelist = ['https://currency-rates-l1xg.onrender.com'];
 
 export const corsOptions = {
   origin: function (origin, callback) {
