@@ -13,14 +13,13 @@ dotenv.config();
 app.use(cors(corsOptions));
 app.use(express.json());
 
-const host = 'localhost';
-const port = 8080;
+const port = process.env.PORT || 3000;
 
 async function main() {
   app.use(authRouter);
 
-  app.listen(port, host, () => {
-    console.log(`Server is running at http://${host}:${port}`);
+  app.listen(port, () => {
+    console.log(`Server is running on port ${port}`);
   });
 }
 
