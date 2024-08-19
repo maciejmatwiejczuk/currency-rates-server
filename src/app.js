@@ -18,10 +18,6 @@ const port = 8080;
 async function main() {
   app.use(authRouter);
 
-  app.get('/', (req, res) => {
-    res.send({ greeting: 'Hello World!' });
-  });
-
   app.listen(port, host, () => {
     console.log(`Server is running at http://${host}:${port}`);
   });
